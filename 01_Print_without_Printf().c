@@ -1,8 +1,9 @@
 
-#include <unistd.h>
+#include <stdio.h>
 
 int main() {
-    write(1, "First c Program\n", 16);
+    puts("First c Program");
     return 0;
 }
+
 
