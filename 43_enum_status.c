@@ -1,7 +1,5 @@
 #include <stdio.h>
-
 enum Status{PENDING,SHIPPED,DELIVERED};
-
 int main(){
     enum Status s=PENDING;
     s=SHIPPED;
