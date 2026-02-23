@@ -1,19 +1,24 @@
-#include <stdio.h>
-#include <math.h>
-
-int main() {
-    int n, flag=0;
-    scanf("%d", &n);
-
-    if(n<=1) flag=1;
-
-    for(int i=2;i<=sqrt(n);i++) {
-        if(n%i==0) {
-            flag=1;
-            break;
+#include<stdio.h>
+#include<math.h>
+int main(){
+    int a;
+    scanf("%d",&a);
+    int prime=1;
+    if(a<=1){
+        prime=0;
+    }
+    else{
+        for(int i=2;i<sqrt(a);i++){
+            if(a%i==0){
+                prime=0;break;
+            }
         }
     }
-
-    flag?printf("Not Prime\n"):printf("Prime\n");
-    return 0;
+    if(prime){
+        printf("prime");
+    }
+    else{
+        printf("not prime");
+    }
 }
+ 
