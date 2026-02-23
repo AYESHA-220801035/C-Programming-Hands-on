@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 void swap(char **a,char **b){
     char *t=*a;
     *a=*b;
     *b=t;
 }
-
 int main(){
     char *x=malloc(20);
     char *y=malloc(20);
