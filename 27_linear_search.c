@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main(){
     int n,target,pos=-1;
     scanf("%d",&n);
