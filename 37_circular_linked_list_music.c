@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 struct Song{
     char name[50];
     struct Song* next;
 };
-
 int main(){
     struct Song *head=NULL,*tail=NULL,*newnode;
     for(int i=0;i<5;i++){
