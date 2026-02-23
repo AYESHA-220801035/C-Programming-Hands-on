@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 int cmp(const void* a,const void* b){return (*(int*)a-*(int*)b);}
-
 int main(){
     FILE *f=fopen("input.txt","r");
     int arr[100],n=0;
