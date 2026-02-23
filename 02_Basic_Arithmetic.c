@@ -1,18 +1,14 @@
-
 #include <stdio.h>
-
 int main() {
-    int a, b;
-    scanf("%d %d", &a, &b);
-
-    printf("Sum: %d\n", a + b);
-    printf("Difference: %d\n", a - b);
-    printf("Product: %d\n", a * b);
-
-    if (b != 0)
-        printf("Quotient: %d\n", a / b);
-    else
-        printf("Division by zero not allowed\n");
-
-    return 0;
+    int a;int b;
+    scanf("%d %d",&a,&b);
+    printf("sum is %d\n",a+b);
+    printf("diff is %d\n",a-b);
+    printf("product is %d\n",a*b);
+    if(b!=0){
+    printf("quotient is %d",a/b);
+}else{
+    printf("Cant divide by 0");
 }
+}
+
