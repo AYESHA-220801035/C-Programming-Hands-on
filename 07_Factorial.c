@@ -1,13 +1,16 @@
 #include <stdio.h>
-
 int main() {
-    int n;
-    scanf("%d", &n);
-
-    long long fact = 1;
-    for(int i=1;i<=n;i++)
-        fact *= i;
-
-    printf("Factorial: %lld\n", fact);
-    return 0;
+    int a;
+    scanf("%d",&a);
+    int fact=1;
+    if(a<0){
+        printf("factorial is not for negative numbers");
+    }
+    else{
+    for(int i=1;i<=a;i++){
+        fact=fact*i;
+    }
+    printf("fact is %d",fact);
+    }
+   return 0;
 }
