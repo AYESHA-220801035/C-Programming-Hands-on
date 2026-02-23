@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 struct Item{
     int id;
     char name[50];
 };
-
 int main(){
     int n;
     scanf("%d",&n);
