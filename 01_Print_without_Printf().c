@@ -1,9 +1,8 @@
-
 #include <stdio.h>
-
 int main() {
     puts("First c Program");
     return 0;
 }
+
 
 
