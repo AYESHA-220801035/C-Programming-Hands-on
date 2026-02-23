@@ -1,10 +1,8 @@
 #include <stdio.h>
-
 double add(double a,double b){return a+b;}
 double sub(double a,double b){return a-b;}
 double mul(double a,double b){return a*b;}
 double divi(double a,double b){return b!=0?a/b:0;}
-
 int main(){
     double x,y;
     int choice;
