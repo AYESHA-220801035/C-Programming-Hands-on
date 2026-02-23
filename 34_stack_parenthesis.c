@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-
 int main(){
     char exp[100];
     scanf("%s",exp);
