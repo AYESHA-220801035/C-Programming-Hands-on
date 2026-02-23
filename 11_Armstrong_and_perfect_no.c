@@ -1,28 +1,40 @@
-#include <stdio.h>
-#include <math.h>
-
-int isArmstrong(int n) {
-    int temp=n,sum=0,digits=0;
-    while(temp){digits++; temp/=10;}
-    temp=n;
-    while(temp){
-        sum+=pow(temp%10,digits);
-        temp/=10;
+#include<stdio.h>
+#include<math.h>
+int armstrong(int a){
+    int temp=a;int sum=0;int cou=0;int lasdig=0;
+    while(temp!=0){
+        cou++;
+        temp=temp/10;
     }
-    return sum==n;
+    temp=a;
+    while(temp!=0){
+        lasdig=temp%10;
+        sum=sum+ pow(lasdig,cou);
+        temp=temp/10;
+    }
+    return (sum==a);
 }
-
-int isPerfect(int n){
+int perfect(int a){
     int sum=0;
-    for(int i=1;i<n;i++)
-        if(n%i==0) sum+=i;
-    return sum==n;
+    for(int i=1;i<a;i++){
+        if(a%i==0){
+            sum=sum+i;
+        }
+    }
+    return (sum==a);
 }
-
 int main(){
-    int n;
-    scanf("%d",&n);
-
-    printf(isArmstrong(n)?"Armstrong\n":"Not Armstrong\n");
-    printf(isPerfect(n)?"Perfect\n":"Not Perfect\n");
-}
+    int a;
+    scanf("%d",&a);
+    if(armstrong(a))
+    printf("Armstrong no\n");
+    else{
+        printf("not armstrong no\n");
+    }
+    if(perfect(a)){
+        printf("perfect no");
+    }
+    else{
+        printf("not perfect no");
+    }
+    }
