@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdarg.h>
-
 int sum(int count,...){
     va_list args;
     va_start(args,count);
@@ -9,7 +8,6 @@ int sum(int count,...){
     va_end(args);
     return s;
 }
-
 int main(){
     printf("%d\n",sum(4,10,20,30,40));
     return 0;
