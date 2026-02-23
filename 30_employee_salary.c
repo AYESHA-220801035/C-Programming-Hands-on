@@ -1,10 +1,8 @@
 #include <stdio.h>
-
 struct Employee{
     int id;
     float salary;
 };
-
 int main(){
     struct Employee e[10];
     float total=0;
