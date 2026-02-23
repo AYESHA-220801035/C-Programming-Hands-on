@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-
 int main(){
     char text[200],words[50][20];
     int count[50]={0},n=0;
