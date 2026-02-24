@@ -3,8 +3,12 @@
 int add(int a,int b){return a+b;}
 int sub(int a,int b){return a-b;}
 int mul(int a,int b){return a*b;}
-int divide(int a,int b){return b!=0?a/b:0;}
-
+int divide(int a,int b){ 
+    if(b!=0){
+    return a/b;
+}
+else{ return 0; }
+}
 int main(){
     int (*ops[4])(int,int)={add,sub,mul,divide};
     int choice,a,b;
