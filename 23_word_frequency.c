@@ -1,28 +1,32 @@
 #include <stdio.h>
 #include <string.h>
-
-int main(){
-    char text[200],words[50][50];
-    int count[50]={0},n=0;
-    printf("Enter paragraph:\n");
-    fgets(text,200,stdin);
-    char *token=strtok(text," ,.
-");
-    while(token){
-        int found=0;
-        for(int i=0;i<n;i++){
-            if(strcmp(words[i],token)==0){
-                count[i]++; found=1; break;
+int main() {
+    char text[200];
+    char words[20][20];     
+    int count[20] = {0};  
+    int total = 0;
+    printf("Enter a sentence:\n");
+    fgets(text, sizeof(text), stdin);
+    char *word = strtok(text, " \n");
+    while (word != NULL) {
+        int found = 0;
+        for (int i = 0; i < total; i++) {
+            if (strcmp(words[i], word) == 0) {
+                count[i]++;   
+                found = 1;
+                break;
             }
         }
-        if(!found){
-            strcpy(words[n],token);
-            count[n++]=1;
+        if (found == 0) {
+            strcpy(words[total], word);
+            count[total] = 1;
+            total++;
         }
-        token=strtok(NULL," ,.
-");
+        word = strtok(NULL, " \n");
     }
-    for(int i=0;i<n;i++)
-        printf("%s:%d\n",words[i],count[i]);
+    printf("\nWord Frequencies:\n");
+    for (int i = 0; i < total; i++) {
+        printf("%s : %d\n", words[i], count[i]);
+    }
     return 0;
 }
