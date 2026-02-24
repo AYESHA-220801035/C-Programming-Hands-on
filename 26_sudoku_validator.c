@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int check(int grid[9][9]){
     for(int i=0;i<9;i++){
         int row[10]={0},col[10]={0};
@@ -12,7 +11,6 @@ int check(int grid[9][9]){
     }
     return 1;
 }
-
 int main(){
     int grid[9][9];
     for(int i=0;i<9;i++)
