@@ -2,9 +2,9 @@
 typedef struct {
     int id;
     char name[50];
-} Employee;
+} Emp;
 int main() {
-    Employee e = {1, "John"};
+    Emp e = {1, "John"};
     printf("%d %s\n", e.id, e.name);
     return 0;
 }
