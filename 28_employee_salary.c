@@ -10,7 +10,8 @@ int main(){
         total=total+e[i].salary;
     }
     for(int i=1;i<10;i++)
-        if(e[i].salary>e[high].salary) high=i;
-    printf("Total=%.2f\n Highest ID=%d\n",total,e[high].id);
+        if(e[i].salary>e[high].salary)
+            high=i;
+    printf("Total=%.2f\n Highest ID=%d\n Highest salary =%.2f\n",total,e[high].id,e[high].salary);
     return 0;
 }
