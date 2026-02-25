@@ -1,15 +1,26 @@
 #include <stdio.h>
-
-float add(float a,float b){return a+b;}
-float sub(float a,float b){return a-b;}
-float mul(float a,float b){return a*b;}
-float divi(float a,float b){return b!=0?a/b:0;}
-
+float add(float a,float b){
+    return a+b;
+}
+float sub(float a,float b){
+    return a-b;
+}
+float mul(float a,float b){
+    return a*b;
+}
+float divi(float a,float b){
+    if(b!=0){
+        return a/b;
+    }
+    else{
+        return 0;
+}
+}
 int main(){
     float (*ops[4])(float,float)={add,sub,mul,divi};
     int choice;
     float a,b;
-    printf("Select 1:+ 2:- 3:* 4:/\n");
+    printf("Select 1:add 2:sub 3:mul 4:div \n");
     scanf("%d",&choice);
     printf("Enter two numbers: ");
     scanf("%f%f",&a,&b);
