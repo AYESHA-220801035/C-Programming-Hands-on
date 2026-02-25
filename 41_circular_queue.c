@@ -1,9 +1,7 @@
 #include <stdio.h>
 #define SIZE 5
-
 int queue[SIZE];
 int front = -1, rear = -1;
-
 void enqueue(int val) {
     if((rear + 1) % SIZE == front) {
         printf("Queue Full\n");
@@ -13,7 +11,6 @@ void enqueue(int val) {
     rear = (rear + 1) % SIZE;
     queue[rear] = val;
 }
-
 void dequeue() {
     if(front == -1) {
         printf("Queue Empty\n");
@@ -25,7 +22,6 @@ void dequeue() {
     else
         front = (front + 1) % SIZE;
 }
-
 int main() {
     enqueue(10);
     enqueue(20);
@@ -34,7 +30,6 @@ int main() {
     enqueue(40);
     enqueue(50);
     enqueue(60);
-
     while(front != -1)
         dequeue();
     return 0;
